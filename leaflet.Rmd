@@ -1,0 +1,26 @@
+---
+title: "leaflet"
+author: "Thomas Imanol Rodriguez"
+date: "3/2/2022"
+output: ioslides_presentation
+---
+install.packages("leaflet")
+library(leaflet)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r , echo=FALSE}
+mymap<-leaflet()%>%
+  addTiles()
+mymap
+```
+
+```{r , echo=FALSE}
+library(leaflet)
+mymap<-mymap %>%
+  addMarkers(lat=-38.2760763, lng=-57.8409073,popup="mdp")
+mymap
+```
